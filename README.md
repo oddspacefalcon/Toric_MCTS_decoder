@@ -1,4 +1,4 @@
-# toric-RL-decoder
+# toric-RL-decoder and MCTS-decoder
 
 Deep Q-learning decoder and MCTS decoder for depolarizing noise on the toric code
 
