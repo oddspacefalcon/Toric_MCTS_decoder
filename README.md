@@ -1,64 +1,58 @@
-# toric-RL-decoder and MCTS-decoder
+# MCTS-avkodare och RL-avkodare på torisk kod
 
-Deep Q-learning decoder and MCTS decoder for depolarizing noise on the toric code
+Djup Q-inlärnings avkodare och MCTS avkodare på torisk kod
 
 Simon Sundelin, Marcus Remgård, Christian Nilsson, Mikkel Opperud, Joel Erikanders, Joel Harf Abili
 
 ![](docs/visual/toric_code_gif.gif)
 
 
-
-
-Deep reinforcement learning decoder for the toric code in pytorch. 
-
-## Prerequisites 
+## Krav 
 - Python 3
-
-## Getting started 
+ 
 ### Installation 
-- The required libraries are matplotlib, numpy and pytorch
+- Biblioteken som användes var matplotlib, numpy and pytorch
 
 ```bash
 pip install -r requirements.txt
 ```
 
-- Clone this repo:
+- Klona repot:
 ```bash
 git clone https://github.com/mats-granath/toric-RL-decoder.git
 ```
 
-## How to use the simulator
-There are three example scripts
+## Hur används simmulatorn?
+Där finns tre exempel scripts
 - train_script.py
 - prediction_script_network.py
 - prediction_script_MCTS.py
 
-The train script trains an agent to solve syndromes. All the hyperparameters related to the training are specified in the script. Moreover, an evaluation of the training run is stored in the data folder with a timestamp.
+train_script tränar en agent för att lösa syndrom. Alla hyperparametrar relaterade till träningen anges i skriptet. Dessutom lagras en utvärdering av träningskörningen i data mappen.
 
-The predict script uses a trained network and predicts given a specified amount of syndromes. The trained network can be loaded from the network folder.
+prediction_script_network använder ett utbildat nätverk och förutsäger en viss mängd syndrom. Det utbildade nätverket kan laddas från nätverksmappen.
 
-The predict MCTS script uses a trained network to guide a tree search and predicts given a specified amount of syndromes. The guiding network can be loaded from the network folder
+prediction_script_MCTS använder ett utbildat nätverk för att guida en trädsökning och förutsäger en viss mängd syndrom. Det styrande nätverket kan laddas från nätverksmappen
 
 
-## Structure of this repo
+## Repots struktur
 
-File | Description
+Fil | Beskrivning
 ----- | -----
-`├── data` | A directory that contains the evaluation data for each training or prediction run.
-`├── network` | Pretrained models for the grid sizes 5,7, and 9.
-`├── plots` | Some of the plots of the toric code generated during prediction are saved in that folder.
-`├── src` | Source files for the agent and toric code.
-`·   ├── RL.py` | Training and predicition of network occurs here
-`·   ├── predict_MCTS.py` | Prediction using MCTS decoder
-`·   ├── MCTS.py` | MCTS decoder
-`·   ├── Replay_memory.py` | Contains classes for a replay memory with uniform and proportional sampling. 
-`·   ├── Sum_tree.py` | A binary tree data structure where the parent’s value is the sum of its children.
-`·   └── Toric_model.py` | Contains the class toric_code and functions that are relevant to manipulate the grid.
-`├── NN.py` | Contains different network architectures
-`├── README.md` | About the project.
-`├── ResNet.py` | Contains different ResNet architectures
-`├── requirements.txt` | The Python libraries that will be installed. Only the libraries in this official repo will be available.
-`├── train_script` | A script training an agent to solve the toric code.
-`└── predict_script_network` | The trained agent solves syndromes.
-`└── prediction_script_MCTS` | MCTS decoder solves syndromes.
+`├── data` | En mapp som innehåller utvärderingsdata för varje tränings- eller förutsägelseskörning.
+`├── network` | Förtränade modeller för strolek 5,7, 9 och 11.
+`├── plots` | Några of graferna som genererats under förutsägelseskörning.
+`├── src` | Source filer för MCTS, nätverken och den toriska koden.
+`·   ├── RL.py` | Träning och förutsägelse av nätverk
+`·   ├── predict_MCTS.py` | förutsägelseskript som använder MCTS som avkodare
+`·   ├── MCTS.py` | MCTS avkodare
+`·   ├── Replay_memory.py` | Innehåller klasser för ett reprisminne och proportionell sampling.
+`·   ├── Sum_tree.py` | En binär träddatastruktur där "förälderns" värde är summan av sina barn
+`·   └── Toric_model.py` | Innehåller klassen toric_code och relevanta funktioner.
+`├── NN.py` | Innehåller olika nätverksarkitekturer
+`├── README.md` | Om projektet
+`├── ResNet.py` | Innehåller olika ResNet-arkitekturer
+`├── train_script` | ett skript som tränar en agent för att lösa den toriska koden.
+`└── predict_script_network` | Den tränade agenten löser syndromen
+`└── prediction_script_MCTS` | MCTS löser syndromen
 
