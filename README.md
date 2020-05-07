@@ -4,7 +4,7 @@ Djup Q-inlärnings avkodare och MCTS avkodare på torisk kod
 
 Simon Sundelin, Marcus Remgård, Christian Nilsson, Mikkel Opperud, Joel Erikanders, Joel Harf Abili
 
-![](docs/visual/toric_code_gif.gif)
+![](docs/visual/toric_code.gif)
 
 
 ## Krav 
