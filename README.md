@@ -4,7 +4,7 @@ Deep Q-learning decoder and MCTS decoder for depolarizing noise on the toric cod
 
 Simon Sundelin, Marcus Remgård, Christian Nilsson, Mikkel Opperud, Joel Erikanders, Joel Harf Abili
 
-![](docs/visual/error_correction.gif)
+![](docs/visual/toric_code_gif.gif)
 
 
 
